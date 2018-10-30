@@ -23,7 +23,7 @@ func GenerateCmd(wixFile *manifest.WixManifest, templates []string, msiOutFile s
 		cmd += " -out AppFiles" + sI + ".wxs"
 		cmd += eol
 	}
-	cmd += "candle"
+	cmd += "candle -ext WixUIExtension"
 	if arch != "" {
 		if arch == "386" {
 			arch = "x86"
