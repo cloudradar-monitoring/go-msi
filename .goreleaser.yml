@@ -1,0 +1,35 @@
+builds:
+- main: main.go
+  binary: go-msi
+  goos:
+  - windows
+  goarch:
+  - 386
+  - amd64
+  ldflags:
+  - -s -w -X main.version={{.Version}}
+  env:
+  - CGO_ENABLED=0
+archive:
+  replacements:
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+    386: i386
+    amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+release:
+  github:
+    owner: cloudradar-monitoring
+    name: go-msi
+  draft: false
+
