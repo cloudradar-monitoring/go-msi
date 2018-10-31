@@ -11,6 +11,7 @@ builds:
   env:
   - CGO_ENABLED=0
 archive:
+  format: zip
   replacements:
     darwin: Darwin
     linux: Linux
