@@ -1,20 +1,30 @@
-hash: ebc371608c61721e2c6b4a1728fcbe972ba7b103a4405104a78ea5c13c04a347
-updated: 2017-02-18T16:39:56.234882986+01:00
+hash: f8df2f1d38aefd788e0775c0246dedecb8888080da5e83af47d35ea3a7f77c7d
+updated: 2019-03-20T22:09:00.003345825+03:00
 imports:
+- name: github.com/google/uuid
+  version: 0cd6bf5da1e1c83f8b45653022c74f71af0538a4
+- name: github.com/kardianos/service
+  version: 56787a3ea05e9b262708192e7ce3b500aba73561
 - name: github.com/Masterminds/semver
-  version: 59c29afe1a994eacb71c833025ca7acf874bb1da
+  version: c7af12943936e8c39859482e61f0574c2fd7fc75
 - name: github.com/mattn/go-zglob
-  version: 95345c4e1c0ebc9d16a3284177f09360f4d20fab
+  version: 2ea3427bfa539cca900ca2768d8663ecc8a708c1
   subpackages:
   - fastwalk
 - name: github.com/mh-cbon/stringexec
   version: bc348d279f975052c5169eedf4efb1bc0469453f
-- name: github.com/satori/go.uuid
-  version: 879c5887cd475cd7864858769793b2ceb0d44feb
 - name: github.com/urfave/cli
-  version: 0bdeddeeb0f650497d603c4ad7b20cfe685682f6
+  version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
+- name: golang.org/x/sys
+  version: 6c81ef8f67ca3f42fc9cd71dfbd5f35b0c4b5771
+  subpackages:
+  - windows
+  - windows/registry
+  - windows/svc
+  - windows/svc/eventlog
+  - windows/svc/mgr
 - name: golang.org/x/text
-  version: 85c29909967d7f171f821e7a42e7b7af76fb9598
+  version: 5d731a35f4867878fc89f7744f7b6debb3beded6
   subpackages:
   - encoding
   - encoding/charmap

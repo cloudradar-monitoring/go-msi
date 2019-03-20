@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	"github.com/Masterminds/semver"
-	"github.com/satori/go.uuid"
+	"github.com/google/uuid"
 )
 
 // WixManifest is the struct to decode a wix.json file.
@@ -149,19 +149,19 @@ func (wixFile *WixManifest) Load(p string) error {
 func (wixFile *WixManifest) SetGuids(force bool) (bool, error) {
 	updated := false
 	if wixFile.UpgradeCode == "" || force {
-		wixFile.UpgradeCode = uuid.NewV4().String()
+		wixFile.UpgradeCode = uuid.Must(uuid.NewRandom()).String()
 		updated = true
 	}
 	if wixFile.Files.GUID == "" || force {
-		wixFile.Files.GUID = uuid.NewV4().String()
+		wixFile.Files.GUID = uuid.Must(uuid.NewRandom()).String()
 		updated = true
 	}
 	if (wixFile.Env.GUID == "" || force) && len(wixFile.Env.Vars) > 0 {
-		wixFile.Env.GUID = uuid.NewV4().String()
+		wixFile.Env.GUID = uuid.Must(uuid.NewRandom()).String()
 		updated = true
 	}
 	if (wixFile.Shortcuts.GUID == "" || force) && len(wixFile.Shortcuts.Items) > 0 {
-		wixFile.Shortcuts.GUID = uuid.NewV4().String()
+		wixFile.Shortcuts.GUID = uuid.Must(uuid.NewRandom()).String()
 		updated = true
 	}
 	return updated, nil
