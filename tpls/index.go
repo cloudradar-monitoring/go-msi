@@ -11,8 +11,8 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/cloudradar-monitoring/go-msi/manifest"
 	"github.com/mattn/go-zglob"
-	"github.com/mh-cbon/go-msi/manifest"
 )
 
 var funcMap = template.FuncMap{

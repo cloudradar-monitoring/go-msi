@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mh-cbon/go-msi/manifest"
+	"github.com/cloudradar-monitoring/go-msi/manifest"
 )
 
 var eol = "\r\n"
